@@ -16,7 +16,8 @@ class NewsController extends Controller
     public function article($id)
     {
         $data = [
-            'menu' => 'Berita'
+            'menu' => 'Berita',
+            'id' => $id
         ];
         return view('news.article', $data);
     }
