@@ -14,22 +14,22 @@
             </div>
         </div>
 
-        <div class="section full mt-3 mb-3">
+        <div class="section  mt-3 mb-3">
             <h4 class="h4 pl-2 font-weight-bold">Data</h4>
-            <div class="carousel-multiple owl-carousel owl-theme">
+            <div class="row">
 
-                <div class="item">
+                <div class="item w-50 p-2">
                     <a href=" {{ route('goverment') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-pemerintahan.png') }}" class="card-img-top home-icon"
                                 alt="image">
                             <div class="card-body pt-2 text-center">
-                                <h4 class="mb-0">Pemerintahan Desa</h4>
+                                <h4 class="mb-0">Pemerintahan</h4>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="item">
+                <div class="item w-50 p-2">
                     <a href=" {{ route('social') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-sosial.png') }}" class="card-img-top home-icon"
@@ -40,7 +40,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="item">
+                <div class="item w-50 p-2">
                     <a href=" {{ route('culture') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-budaya.png') }}" class="card-img-top home-icon"
@@ -51,7 +51,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="item">
+                <div class="item w-50 p-2">
                     <a href=" {{ route('travel') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-pariwisata.png') }}" class="card-img-top home-icon"
@@ -83,21 +83,33 @@
         </div>
         <div class="section mt-4">
             <h4 class="h4 font-weight-bold">Berita Terbaru</h4>
-            @for ($i = 0; $i < 3; $i++)
-                <a href=" {{ route('article', '1') }} ">
-                    <div class="card mb-2">
-                        <img src="https://cdn-2.tstatic.net/tribunnews/foto/bank/images/jokowi-f0192.jpg"
-                            class="card-img-top" alt="image">
-                        <div class="card-body">
-                            <h5 class="h4">Judul Artikel Pengumuman atau Berita</h5>
-                            <p class="card-text text-secondary">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-secondary"><small>Hari ini</small></p>
-                        </div>
+
+            <a href=" {{ route('article', '1') }} ">
+                <div class="card mb-2">
+                    <img src="https://desangadas.com/wp-content/uploads/2022/08/sadran3-300x178.jpg" class="card-img-top"
+                        alt="image">
+                    <div class="card-body">
+                        <h5 class="h5">Sadranan atau Nyadran, Puncak Sekaligus Penutup dari Rangkaian Upacara
+                            Hari Raya Karo
+                            Suku Tengger di Desa Ngadas</h5>
+
+                        <p class="card-text text-secondary"><small>Hari ini</small></p>
                     </div>
-                </a>
-            @endfor
+                </div>
+            </a>
+            <a href=" {{ route('article', '2') }} ">
+                <div class="card mb-2">
+                    <img src="https://desangadas.com/wp-content/uploads/2022/08/sadranan-1.jpg" class="card-img-top"
+                        alt="image">
+                    <div class="card-body">
+                        <h5 class="h5">Mengenal Lebih Jauh Hari Raya Karo, Serangkaian Upacara Adat yang
+                            Diselenggarakan oleh Masyarakat Suku Tengger di Desa Ngadas</h5>
+
+                        <p class="card-text text-secondary"><small>Hari ini</small></p>
+                    </div>
+                </div>
+            </a>
+
 
 
             <a href=" {{ route('forum') }} " class="btn btn-primary rounded mr-1 my-2 btn-block">Lihat Semua Berita</a>
