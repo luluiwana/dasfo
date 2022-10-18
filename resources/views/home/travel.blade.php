@@ -30,69 +30,30 @@
 
 
         <div class="section mt-2">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet leo eget maximus ultricies. Nunc
-                vitae enim facilisis tortor aliquet ullamcorper nec at tortor. Vivamus lobortis, orci et commodo
-                pulvinar, eros nibh volutpat ipsum, in rhoncus risus dolor sed ipsum. Interdum et malesuada fames ac
-                ante ipsum primis in faucibus. Donec nisi odio, dapibus in felis vel, lobortis iaculis quam.
-                Pellentesque porttitor ante eu varius elementum. Etiam in interdum sapien. Maecenas facilisis dolor eget
-                condimentum iaculis. Curabitur ac accumsan purus. Suspendisse tristique suscipit lorem, eget pretium
-                erat congue ac. In hac habitasse platea dictumst. Fusce a turpis ac lacus dictum porta. Ut vestibulum
-                nisi at dui pulvinar sodales. Cras et risus non odio vulputate dignissim sed tincidunt orci.
+            <p>Sejak tahun 2007 lalu, Desa Ngadas Malang diubah menjadi desa wisata. Alasannya, karena desa ini memiliki
+                potensi wisata yang menarik, seperti Ranupane, Coban Trisula, hingga petik apel. Desa Ngadas Malang berada
+                dalam area teritorial Taman Nasional Bromo Tengger Semeru (TN BTS). Berada di ketinggian 2.150 meter di atas
+                permukaan laut menjadikan Desa Ngadas Bromo ini menjadi salah satu desa tertinggi yang ada di Jawa. Tak
+                heran kalau banyak orang menyebutnya Desa Atas Awan di Malang.</p>
+            <p>Desa Ngadas Malang memiliki panorama yang luar biasa cantik. Salah satu jalanan di desa ini memiliki panorama
+                langsung yang menghadap ke Gunung Bromo. Saat pagi hari, kabut tipis yang menyelimuti desa membuat suasana
+                makin damai dan sejuk. Desa ini juga merupakan pintu masuk untuk menuju ke Gunung Bromo melalui Poncokusumo.
             </p>
-            <p>
-                Pellentesque eget ipsum vel enim ultricies gravida id non ex. Nunc felis neque, vulputate sed faucibus
-                sed, hendrerit at ante. Pellentesque rutrum dui quis metus pulvinar vehicula. Nulla congue hendrerit ex,
-                ut facilisis lorem facilisis et. Fusce ac nunc convallis, accumsan leo ac, sagittis tortor. Duis lacinia
-                tortor quis metus sollicitudin vestibulum. Etiam non urna dignissim, iaculis tortor id, tempor lectus.
-                Vestibulum condimentum orci ac ullamcorper rutrum. Ut interdum nunc vel vehicula dapibus. Integer ut
-                lacinia lacus.
-            </p>
-            <p>
-                Nam blandit consectetur enim at finibus. Donec eget felis mi. Sed dictum rhoncus nibh, eu venenatis est
-                sagittis non. Vivamus pellentesque massa sit amet interdum pellentesque. In feugiat lobortis magna, at
-                aliquam neque dapibus quis. Nullam ultrices, lectus id eleifend rutrum, nunc lacus egestas risus, sed
-                pulvinar mauris diam sit amet nisl. Curabitur volutpat lorem in elit venenatis, sed malesuada orci
-                volutpat. Cras in mi erat. Mauris id eros in leo consequat auctor eu sed felis. Donec in leo turpis.
-                Phasellus in odio leo. Etiam eu condimentum enim. Donec eget cursus quam. Quisque congue libero sit amet
-                neque consectetur, posuere euismod diam viverra.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet leo eget maximus ultricies. Nunc
-                vitae enim facilisis tortor aliquet ullamcorper nec at tortor. Vivamus lobortis, orci et commodo
-                pulvinar, eros nibh volutpat ipsum, in rhoncus risus dolor sed ipsum. Interdum et malesuada fames ac
-                ante ipsum primis in faucibus. Donec nisi odio, dapibus in felis vel, lobortis iaculis quam.
-                Pellentesque porttitor ante eu varius elementum. Etiam in interdum sapien. Maecenas facilisis dolor eget
-                condimentum iaculis. Curabitur ac accumsan purus. Suspendisse tristique suscipit lorem, eget pretium
-                erat congue ac. In hac habitasse platea dictumst. Fusce a turpis ac lacus dictum porta. Ut vestibulum
-                nisi at dui pulvinar sodales. Cras et risus non odio vulputate dignissim sed tincidunt orci.
-            </p>
-            <p>
-                Pellentesque eget ipsum vel enim ultricies gravida id non ex. Nunc felis neque, vulputate sed faucibus
-                sed, hendrerit at ante. Pellentesque rutrum dui quis metus pulvinar vehicula. Nulla congue hendrerit ex,
-                ut facilisis lorem facilisis et. Fusce ac nunc convallis, accumsan leo ac, sagittis tortor. Duis lacinia
-                tortor quis metus sollicitudin vestibulum. Etiam non urna dignissim, iaculis tortor id, tempor lectus.
-                Vestibulum condimentum orci ac ullamcorper rutrum. Ut interdum nunc vel vehicula dapibus. Integer ut
-                lacinia lacus.
-            </p>
-            <p>
-                Nam blandit consectetur enim at finibus. Donec eget felis mi. Sed dictum rhoncus nibh, eu venenatis est
-                sagittis non. Vivamus pellentesque massa sit amet interdum pellentesque. In feugiat lobortis magna, at
-                aliquam neque dapibus quis. Nullam ultrices, lectus id eleifend rutrum, nunc lacus egestas risus, sed
-                pulvinar mauris diam sit amet nisl. Curabitur volutpat lorem in elit venenatis, sed malesuada orci
-                volutpat. Cras in mi erat. Mauris id eros in leo consequat auctor eu sed felis. Donec in leo turpis.
-                Phasellus in odio leo. Etiam eu condimentum enim. Donec eget cursus quam. Quisque congue libero sit amet
-                neque consectetur, posuere euismod diam viverra.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet leo eget maximus ultricies. Nunc
-                vitae enim facilisis tortor aliquet ullamcorper nec at tortor. Vivamus lobortis, orci et commodo
-                pulvinar, eros nibh volutpat ipsum, in rhoncus risus dolor sed ipsum. Interdum et malesuada fames ac
-                ante ipsum primis in faucibus. Donec nisi odio, dapibus in felis vel, lobortis iaculis quam.
-                Pellentesque porttitor ante eu varius elementum. Etiam in interdum sapien. Maecenas facilisis dolor eget
-                condimentum iaculis. Curabitur ac accumsan purus. Suspendisse tristique suscipit lorem, eget pretium
-                erat congue ac. In hac habitasse platea dictumst. Fusce a turpis ac lacus dictum porta. Ut vestibulum
-                nisi at dui pulvinar sodales. Cras et risus non odio vulputate dignissim sed tincidunt orci.
+            <img src="https://phinemo.com/wp-content/uploads/2018/04/16908634_786468528168232_4858256345679265792_n-768x768.jpg"
+                class="w-100" alt="" srcset="">
+            <p>Desa Ngadas Malang juga menjadi contoh bagaimana perbedaan tetap bisa menghadirkan persatuan. Masyarakat desa
+                ini menganut agama yang berbeda, ada yang Islam, Buddha hingga Hindu. Bahkan ada juga yang dalam satu
+                keluarga yang memeluk tiga agama berbeda, namun tetap bisa hidup rukun. Masyarakat Ngadas juga masih
+                mempraktikkan ritual dan upacara kuno yang diyakini membawa mereka pada keteraturan, nasib baik dan
+                kemakmuran.
+            <p>Wisatawan yang datang ke sini dijamin tak akan menyesal. Pemandangan alam yang sungguh indah, udara yang
+                sejuk, suasana pedesaan yang tenang, spot foto yang melimpah, warga yang ramah, budaya yang masih lekat
+                adalah sebagian hal yang akan dirasakan.
+
+                Desa Ngadas Malang ini terletak di Kecamatan Poncokusumo dan terletak di ujung paling timur Kabupaten
+                Malang, berbatasan langsung dengan wilayah Kabupaten Lumajang, Jawa Timur.</p>
+            <img src="https://phinemo.com/wp-content/uploads/2018/04/11351971_1416078528716234_224894956_n.jpg"
+                class="w-100" alt="" srcset="">
             </p>
         </div>
         <a href="#" class="button goTop show">
