@@ -41,4 +41,12 @@ class HomeController extends Controller
         ];
         return view('home.social', $data);
     }
+
+    public function profil()
+    {
+        $data = [
+            'menu' => 'Beranda'
+        ];
+        return view('home.profil-village', $data);
+    }
 }
