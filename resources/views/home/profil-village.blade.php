@@ -30,66 +30,34 @@
 
     <div class="section mt-2">
         <div class="header-large-title p-0">
+            <h2 class="mt-3 mb-1">Tentang Desa</h2>
+            <div class="divider bg-dark  mb-3"></div>
+        </div>
+
+        <iframe width="100%" height="209" src="https://www.youtube.com/embed/VfE0qDz6vKE" title="“Cerita BudayaDesa Ngadas” || TRADISI RITUAL PANGLUKAT (ENTAS-ENTAS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>
+            Topografi ketinggian desa ini adalah berupa daratan sedang yaitu sekitar 2300 m di atas permukaan air laut. Berdasarkan data BPS kabupaten Malang tahun 2009, selama tahun 2009 curah hujan di Desa Ngadas rata-rata mencapai 3000 mm. Curah hujan terbanyak terjadi pada bulan Januari hingga mencapai 3500 mm yang merupakan curah hujan tertinggi selama kurun waktu 2000-2009. Jarak tempuh Desa Ngadas ke ibu kota kecamatan adalah 26 km, yang dapat ditempuh dengan waktu sekitar 60 menit. Sedangkan jarak tempuh ke ibu kota kabupaten adalah 48 km, yang dapat ditempuh dengan waktu sekitar 120 menit.
+        </p>
+        <div class="header-large-title p-0">
             <h2 class="mt-3 mb-1">Sejarah</h2>
             <div class="divider bg-dark  mb-3"></div>
         </div>
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet leo eget maximus ultricies. Nunc
-            vitae enim facilisis tortor aliquet ullamcorper nec at tortor. Vivamus lobortis, orci et commodo
-            pulvinar, eros nibh volutpat ipsum, in rhoncus risus dolor sed ipsum. Interdum et malesuada fames ac
-            ante ipsum primis in faucibus. Donec nisi odio, dapibus in felis vel, lobortis iaculis quam.
-            Pellentesque porttitor ante eu varius elementum. Etiam in interdum sapien. Maecenas facilisis dolor eget
-            condimentum iaculis. Curabitur ac accumsan purus. Suspendisse tristique suscipit lorem, eget pretium
-            erat congue ac. In hac habitasse platea dictumst. Fusce a turpis ac lacus dictum porta. Ut vestibulum
-            nisi at dui pulvinar sodales. Cras et risus non odio vulputate dignissim sed tincidunt orci.
+            Berdasarkan cerita rakyat pada masa terdahulu Desa Ngadas masih berupa hutan belantara dan disitu banyak tumbuh-tumbuhan ADAS PULO WARAS yang kemudian datanglah seseorang yang bernama Mbah Sidik (Sedek) yang ceritanya berasal dari daerah jawa tengah tepatnya daerah Solo atau Surakarta dan melakukan babat alas, bersama keluarga dan kerabatnya hingga perkembangannya menjadi sebuah perkampungan dan nama Ngadas di ambil dari nama Adas Pulo Waras .dan desa ngadas merupakan desa yang masih kuat adat istiadatnya sehingga segala peraturan yang dibuat Pemerintah Desa selalu dipatuhi oleh semua warga masyarakat.
         </p>
 
         <div class="header-large-title p-0">
-            <h2 class="mt-3 mb-1">Perangkat Desa</h2>
+            <h2 class="mt-3 mb-1">Peta Sarana Prasarana</h2>
             <div class="divider bg-dark  mb-3"></div>
         </div>
-        <ul class="listview image-listview media p-0 mb-2">
-            <li>
-                <div class="item">
-                    <div class="imageWrapper">
-                        <img src="assets/img/sample/photo/1.jpg" alt="image" class="imaged w64">
-                    </div>
-                    <div class="in">
-                        <div>
-                            Birds
-                            <div class="text-muted">62 photos</div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="item">
-                    <div class="imageWrapper">
-                        <img src="assets/img/sample/photo/2.jpg" alt="image" class="imaged w64">
-                    </div>
-                    <div class="in">
-                        <div>
-                            Street Photos
-                            <div class="text-muted">15 photos</div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="item">
-                    <div class="imageWrapper">
-                        <img src="assets/img/sample/photo/3.jpg" alt="image" class="imaged w64">
-                    </div>
-                    <div class="in">
-                        <div>
-                            Dogs
-                            <div class="text-muted">97 photos</div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <img src="https://desangadas.com/wp-content/uploads/2022/08/Website.png" class="img-fluid img-responsive" width="100%" alt="peta sarana">
+        <p>
+            Terdiri dari 8 RT Desa Ngadas memiliki luas Wilayah 395 Ha. Luas lahan yang ada terbagi ke dalam beberapa peruntukan, yang dapat dikelompokkan seperti untuk fasilitas umum, pemukiman, pertanian, perkebunan, kegiatan ekonomi dan lain-lain. Sekolah yang terdapat di Desa Ngadas hanya sampai menengah pertama, untuk menengah keatas masyarakat harus menempuh sekolah yang berada di desa tetangga  Kegiatan ekonomi Desa Ngadas ditunjang dari kegiatan pariwisata yaitu Homestay, tercatat terdapat lebih dari 10 Homestay aktif yang menerima tamu dari dalam maupun luar negeri dan memiliki standar yang baik dalam segi hal fasilitas. Terdapat 3 agama resmi di Desa Ngadas yaitu Budha, Islam, dan hindu. Sehingga terdapat 3 tempat ibadah yang berbeda didalam Desa Ngadas.
+        </p>
+
+
     </div>
 
     <a href="#" class="button goTop show">
