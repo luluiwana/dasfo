@@ -30,9 +30,6 @@
 
 
         <div class="section mt-2">
-<<<<<<< HEAD
-
-=======
             <p>Sejak tahun 2007 lalu, Desa Ngadas Malang diubah menjadi desa wisata. Alasannya, karena desa ini memiliki
                 potensi wisata yang menarik, seperti Ranupane, Coban Trisula, hingga petik apel. Desa Ngadas Malang berada
                 dalam area teritorial Taman Nasional Bromo Tengger Semeru (TN BTS). Berada di ketinggian 2.150 meter di atas
@@ -58,7 +55,6 @@
             <img src="https://phinemo.com/wp-content/uploads/2018/04/11351971_1416078528716234_224894956_n.jpg"
                 class="w-100" alt="" srcset="">
             </p>
->>>>>>> 588eb835b8f50d50bfffaa1a8b5961065e16b791
         </div>
         <a href="#" class="button goTop show">
             <ion-icon name="arrow-up-outline" role="img" class="md hydrated" aria-label="arrow up outline"></ion-icon>

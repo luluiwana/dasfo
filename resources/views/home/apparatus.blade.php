@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="section mt-2">
+ <div class="section mt-2">
         <div class="header-large-title p-0">
             <h2 class="mt-3 mb-1">Perangkat Desa</h2>
             <div class="divider bg-dark  mb-3"></div>
@@ -151,6 +151,11 @@
             </div>
         </li>
     </ul>
+    <a href="#" class="button goTop show">
+        <ion-icon name="arrow-up-outline" role="img" class="md hydrated" aria-label="arrow up outline"></ion-icon>
+    </a>
 </div>
+
 </div>
+
 @endsection
