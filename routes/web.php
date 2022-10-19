@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\admin\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/article/{id}', [NewsController::class, 'article'])->name('article');
 Route::get('/forum', [ForumController::class, 'index'])->name('forum');
 Route::get('/addforum', [ForumController::class, 'add'])->name('addforum');
+
+// admin route
+Route::get('/admin', [AuthController::class, 'index'])->name('admin');
