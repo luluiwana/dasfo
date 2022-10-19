@@ -28,6 +28,8 @@ Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/article/{id}', [NewsController::class, 'article'])->name('article');
 Route::get('/forum', [ForumController::class, 'index'])->name('forum');
 Route::get('/addforum', [ForumController::class, 'add'])->name('addforum');
+Route::post('/insert_forum', [ForumController::class, 'insert'])->name('insert_forum');
+
 
 // admin route
 Route::get('/admin', [AuthController::class, 'index'])->name('admin');
