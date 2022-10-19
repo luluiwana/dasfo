@@ -32,41 +32,43 @@
 @section('content')
     <div id="appCapsule">
         <div class="section mt-2">
-            @for ($i = 0; $i < 10; $i++)
-                <div class="card mb-2">
-                    <a href=" {{ route('article', '1') }} " class="">
-                        <div class="d-flex">
-                            <div class="news-thumbnail"
-                                style="background:url('https://desangadas.com/wp-content/uploads/2022/08/sadran3-300x178.jpg')">
 
-                            </div>
-                            <div class="w-70 p-2">
-                                <h5 class="h6">Sadranan atau Nyadran, Puncak Sekaligus Penutup dari Rangkaian Upacara
-                                    Hari Raya Karo
-                                    Suku Tengger di Desa Ngadas</h5>
-
-                                <p class="card-text text-secondary"><small>Senin, 17 oktober 2022</small></p>
-                            </div>
+            <div class="card mb-2">
+                <a href=" {{ route('article', '1') }} " class="">
+                    <div class="d-flex">
+                        <div class="news-thumbnail"
+                            style="background:url('https://desangadas.com/wp-content/uploads/2022/08/sadran3-300x178.jpg')">
 
                         </div>
-                    </a>
-                    <a href=" {{ route('article', '2') }} " class="">
-                        <div class="d-flex">
-                            <div class="news-thumbnail"
-                                style="background:url('https://desangadas.com/wp-content/uploads/2022/08/sadranan-1.jpg')">
+                        <div class="w-70 p-2">
+                            <h5 class="h6">Sadranan atau Nyadran, Puncak Sekaligus Penutup dari Rangkaian Upacara
+                                Hari Raya Karo
+                                Suku Tengger di Desa Ngadas</h5>
 
-                            </div>
-                            <div class="w-70 p-2">
-                                <h5 class="h6">Mengenal Lebih Jauh Hari Raya Karo, Serangkaian Upacara Adat yang
-                                    Diselenggarakan oleh Masyarakat Suku Tengger di Desa Ngadas</h5>
+                            <p class="card-text text-secondary"><small>Senin, 17 oktober 2022</small></p>
+                        </div>
 
-                                <p class="card-text text-secondary"><small>Senin, 17 oktober 2022</small></p>
-                            </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="card mb-2">
+                <a href=" {{ route('article', '2') }} " class="">
+                    <div class="d-flex">
+                        <div class="news-thumbnail"
+                            style="background:url('https://desangadas.com/wp-content/uploads/2022/08/sadranan-1.jpg')">
 
                         </div>
-                    </a>
-                </div>
-            @endfor
+                        <div class="w-70 p-2">
+                            <h5 class="h6">Mengenal Lebih Jauh Hari Raya Karo, Serangkaian Upacara Adat yang
+                                Diselenggarakan oleh Masyarakat Suku Tengger di Desa Ngadas</h5>
+
+                            <p class="card-text text-secondary"><small>Senin, 17 oktober 2022</small></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
 
         </div>
     </div>
