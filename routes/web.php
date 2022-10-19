@@ -23,6 +23,7 @@ Route::get('/goverment', [HomeController::class, 'goverment'])->name('goverment'
 Route::get('/travel', [HomeController::class, 'travel'])->name('travel');
 Route::get('/social', [HomeController::class, 'social'])->name('social');
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
+Route::get('/apparatus', [HomeController::class, 'apparatus'])->name('apparatus');
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/article/{id}', [NewsController::class, 'article'])->name('article');
 Route::get('/forum', [ForumController::class, 'index'])->name('forum');

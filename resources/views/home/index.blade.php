@@ -19,7 +19,7 @@
             <div class="row">
 
                 <div class="item w-50 p-2">
-                    <a href=" {{ route('goverment') }} ">
+                    <a href=" {{ route('profil') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-pemerintahan.png') }}" class="card-img-top home-icon"
                                 alt="image">
@@ -30,7 +30,7 @@
                     </a>
                 </div>
                 <div class="item w-50 p-2">
-                    <a href=" {{ route('goverment') }} ">
+                    <a href=" {{ route('apparatus') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-pemerintahan.png') }}" class="card-img-top home-icon"
                                 alt="image">
@@ -40,6 +40,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="item w-50 p-2">
                     <a href=" {{ route('social') }} ">
                         <div class="card">

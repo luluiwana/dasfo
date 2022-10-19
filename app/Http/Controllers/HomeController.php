@@ -49,4 +49,11 @@ class HomeController extends Controller
         ];
         return view('home.profil-village', $data);
     }
+    public function apparatus()
+    {
+        $data = [
+            'menu' => 'Beranda'
+        ];
+        return view('home.apparatus', $data);
+    }
 }
