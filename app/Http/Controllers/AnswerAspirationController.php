@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AnswerAspiration;
+use App\Models\Aspiration;
 use Illuminate\Http\Request;
 
 class AnswerAspirationController extends Controller
@@ -14,7 +15,6 @@ class AnswerAspirationController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
