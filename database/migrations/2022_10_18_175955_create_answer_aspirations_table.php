@@ -17,9 +17,7 @@ return new class extends Migration
         Schema::create('answer_aspirations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('aspiration');
-            $table->tinyInteger('sender_type');
-            $table->string('name');
+            $table->string('answer');
             $table->foreignIdFor(Aspiration::class);
         });
     }

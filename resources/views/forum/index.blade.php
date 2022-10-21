@@ -45,44 +45,31 @@
 
 
         <div class="section mt-2">
-            @for ($i = 0; $i < 10; $i++)
+            @foreach ($aspirations as $item)
                 <div class="card bg-light mb-2">
                     <div class="card-body">
 
                         <div class="d-flex">
-                            <div class="w-70">
-                                <p class="card-title">Alan Wijaya </p>
+                            <div class="w-50">
+                                <p class="card-title text-capitalize"> {{ $item->name }} </p>
                             </div>
-                            <div class="w-30">
-                                <p class="card-text text-right"><small>11:50 . 12 Oct 22</small></p>
-                            </div>
-                        </div>
-                        <p class="card-text">Masukan agar pelaksanaan acara jalan bersama dilaksanakan pada hari Minggu</p>
-
-
-
-                    </div>
-                </div>
-                <div class="card bg-light mb-2">
-                    <div class="card-body">
-
-                        <div class="d-flex">
-                            <div class="w-70">
-                                <p class="card-title">Anonim </p>
-                            </div>
-                            <div class="w-30">
-                                <p class="card-text text-right"><small>11:50 . 12 Oct 22</small></p>
+                            <div class="w-50">
+                                <p class="card-text text-right"><small>
+                                        {{ Carbon\Carbon::parse($item->created_at)->format('H:i . d-M-y ') }}
+                                    </small></p>
                             </div>
                         </div>
-                        <p class="card-text">Masukan agar pelaksanaan acara jalan bersama dilaksanakan pada hari Minggu</p>
-                        <p class="card-text small text-success">1 Balasan</p>
+                        <p class="card-text"> {!! $item->aspiration !!} </p>
+
+                        {{-- <p class="card-text small text-success">1 Balasan</p> --}}
                     </div>
-                    <div class="p-2  bg-green">
+                    {{-- <div class="p-2  bg-green">
                         <p class="card-text text-primary font-italic font-weight-bold">Admin</p>
                         <p class="card-text text-primary font-italic">Masukan sudah diterima, terimakasih</p>
-                    </div>
+                    </div> --}}
                 </div>
-            @endfor
+            @endforeach
+
         </div>
         <a href="#" class="button goTop show">
             <ion-icon name="arrow-up-outline" role="img" class="md hydrated" aria-label="arrow up outline"></ion-icon>

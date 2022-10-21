@@ -18,9 +18,9 @@
         <div class="section mt-2">
             <div class="wide-block pb-1 pt-1">
 
-                <form>
-
-                    <ul class="listview image-listview no-line no-space flush">
+                <form method="POST" action=" {{ route('insert_forum') }} ">
+                    @csrf
+                    <ul class="listview image-listview no-line no-space flush mb-2">
                         <li>
                             <div class="item">
                                 <div class="icon-box bg-dark">
@@ -30,7 +30,8 @@
                                 <div class="in">
                                     <div>Kirim sebagai anonim</div>
                                     <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                        <input name="anonim" type="checkbox" class="custom-control-input"
+                                            id="customSwitch5">
                                         <label class="custom-control-label" for="customSwitch5"></label>
                                     </div>
                                 </div>
@@ -45,7 +46,7 @@
                                 <div class="in">
                                     <div class="form-group basic">
                                         <div class="input-wrapper">
-                                            <input type="email" class="form-control" id="email6"
+                                            <input name="name" type="text" class="form-control text-capitalize"
                                                 placeholder="Masukkan nama Anda">
                                             <i class="clear-input">
                                                 <ion-icon name="close-circle" role="img" class="md hydrated"
@@ -58,19 +59,24 @@
                         </li>
 
                     </ul>
+                    @error('aspiration')
+                        <div class="alert alert-danger mt-2">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                    <textarea name="aspiration" id="editor"></textarea>
 
+                    <button type="submit" class="btn btn-primary mr-1 mb-1 rounded mt-2">
+
+                        <ion-icon name="send-outline" role="img" class="md hydrated" aria-label="mail outline">
+                        </ion-icon>
+                        Kirim
+                    </button>
                 </form>
 
             </div>
         </div>
-        <div class="section mt-2">
-            <div id="editor"></div>
-            <a href=" {{ route('forum') }} " class="btn btn-primary mr-1 mb-1 rounded mt-2">
-                <ion-icon name="send-outline" role="img" class="md hydrated" aria-label="mail outline">
-                </ion-icon>
-                Kirim
-            </a>
-        </div>
+
     </div>
 @endsection
 @section('custom-js')

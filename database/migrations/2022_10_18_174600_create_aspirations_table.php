@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('aspirations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('aspiration');
-            $table->tinyInteger('sender_type');
+            $table->text('aspiration');
             $table->string('name');
         });
     }
