@@ -86,6 +86,8 @@
         ClassicEditor
             .create(document.querySelector('#editor'), {
                 placeholder: 'Tulis aspirasi Anda...',
+                plugins: [SimpleUploadAdapter],
+                // toolbar: ['undo', 'redo', '|', 'bold', 'italic', 'link', 'numberedList', 'uploadImage']
             })
             .then(editor => {
                 console.log(editor);
@@ -112,6 +114,7 @@
     </script>
 @endsection
 @section('custom-css')
+    <link rel="stylesheet" href=" {{ asset('assets/css/ck_styles.css') }} ">
     <style>
         .ck.ck - editor__main>.ck - editor__editable: not(.ck - focused) {
             min - height: 300 px;
