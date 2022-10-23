@@ -124,7 +124,7 @@
 
 
 
-            <a href=" {{ route('forum') }} " class="btn btn-primary rounded mr-1 my-2 btn-block">Lihat Semua Berita</a>
+            <a href=" {{ route('news') }} " class="btn btn-primary rounded mr-1 my-2 btn-block">Lihat Semua Berita</a>
         </div>
 
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\UploadFile;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,22 @@ Route::get('/article/{id}', [NewsController::class, 'article'])->name('article')
 Route::get('/forum', [ForumController::class, 'index'])->name('forum');
 Route::get('/addforum', [ForumController::class, 'add'])->name('addforum');
 Route::post('/insert_forum', [ForumController::class, 'insert'])->name('insert_forum');
+Route::post('/upload_image', [UploadFile::class, 'uploadImage'])->name('uploadImage');
 
 
 // admin route
-Route::get('/admin', [AuthController::class, 'index'])->name('admin');
+Route::get('/auth', [AuthController::class, 'index'])->name('auth');
+
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
+});
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__ . '/auth.php';

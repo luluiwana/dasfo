@@ -9,9 +9,7 @@
         </div>
         <div class="pageTitle">Berita</div>
         <div class="right">
-            <a href="javascript:;" class="headerButton toggle-searchbox">
-                <ion-icon name="search-outline" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
-            </a>
+
         </div>
     </div>
     <div id="search" class="appHeader">
