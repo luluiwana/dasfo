@@ -78,6 +78,13 @@
         </div>
 
     </div>
+    <div id="toast-8" class="toast-box toast-bottom">
+        <div class="in">
+            <div class="text">
+                Auto closing in 2 seconds.
+            </div>
+        </div>
+    </div>
 @endsection
 @section('custom-js')
     {{-- <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
