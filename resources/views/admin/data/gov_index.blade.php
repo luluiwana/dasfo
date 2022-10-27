@@ -61,20 +61,34 @@
                             </div>
                         </div>
                     </div>
+                    @if (!empty($perangkat))
+                    @endif
                     <div class="card card-body">
-                        <h5>Data Perangkat Desa</h5>
+                        <h5> Data Perangkat Desa</h5>
+
+                    </div>
+                    <div class="card card-body">
+                        <h5>Tambah Data Perangkat Desa</h5>
+                        @if ($errors->has('file'))
+                            <span>{{ $errors->first('file') }}</span>
+                        @endif
                         <form action=" {{ route('add_people') }} " method="post" enctype="multipart/form-data">
                             @csrf
-                            <label class="form-label" for="content">Nama Lengkap</label>
-                            <input type="text" name="name" id="" class="form-control mb-2">
-                            <label class="form-label" for="content">Jabatan</label>
+                            <div id='list_person'>
+                                <label class="form-label" for="content">Nama Lengkap</label>
+                                <input type="text" name="name[]" id="" class="form-control mb-2" required>
+                                <label class="form-label" for="content">Jabatan</label>
 
-                            <input type="text" class="form-control mb-2" name="title" id="">
-                            <label class="form-label" for="content">Foto</label>
+                                <input type="text" class="form-control mb-2" name="title[]" id="" required>
+                                <label class="form-label" for="content">Foto</label>
 
-                            <input type="file" name="file" class="form-control mb-2" name="file" id="file"
-                                required>
-                            <input type="submit" class="btn  btn-success mt-2" value="Simpan">
+                                <input type="file" name="file[]" class="form-control mb-2" name="file" id="file"
+                                    required>
+                                <hr>
+                            </div>
+                            <button id='add_person' type="button"
+                                class="btn btn-success btn-md mr-3 mt-2 text-light">Tambah
+                                Personil</button> <input type="submit" class="btn  btn-success mt-2" value="Simpan">
 
                         </form>
                     </div>
@@ -148,6 +162,25 @@
         CKEDITOR.replace('editor', {
             filebrowserUploadUrl: "{{ route('upload_info', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
+        });
+    </script>
+
+    <script>
+        $('#add_person').click(function() {
+            const pg = `
+            <label class="form-label" for="content">Nama Lengkap</label>
+                                <input type="text" name="name[]" id="" class="form-control mb-2">
+                                <label class="form-label" for="content">Jabatan</label>
+
+                                <input type="text" class="form-control mb-2" name="title[]" id="">
+                                <label class="form-label" for="content">Foto</label>
+
+                                <input type="file" name="file[]" class="form-control mb-2" name="file" id="file"
+                                    required>
+                                <hr>
+            `;
+
+            $('#list_person').append(pg);
         });
     </script>
 @endsection
