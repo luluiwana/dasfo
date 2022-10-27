@@ -71,17 +71,20 @@ class DataController extends Controller
     public function add_people(Request $request)
     {
         $request->validate([
-            'file' => 'required|mimes:png,jpg,png,jpeg|max:2048'
+            'file.*' => 'required|mimes:png,jpg,png,jpeg|max:2048'
         ]);
-        $fileModel = new People;
-        if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('perangkat', $fileName, 'public');
-            // $fileModel->thumbnail = time() . '_' . $request->file->getClientOriginalName();
-            $fileModel->title = $request->title;
-            $fileModel->photo = $filePath;
-            $fileModel->name = $request->name;
-            $fileModel->save();
+        for ($item = 0; $item <= count($request->name); $item++) {
+
+            if (isset($request->file[$item])) {
+                $images = $request->file('file');
+                $fileName = time() . '_' .  $images[$item]->getClientOriginalName();
+                $filePath = $images[$item]->storeAs('data_desa', $fileName, 'public');
+                $fileModel = new People();
+                $fileModel->title = $request->title[$item];
+                $fileModel->name = $request->name[$item];
+                $fileModel->photo = $filePath;
+                $fileModel->save();
+            }
         }
         return redirect('govdata/Pemerintahan');
     }
@@ -139,5 +142,10 @@ class DataController extends Controller
                 ->with('file', $fileName);
         }
         return redirect('/data/' . $title);
+    }
+
+    public function edit_people($id)
+    {
+        # code...
     }
 }
