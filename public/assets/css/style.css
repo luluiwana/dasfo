@@ -1233,10 +1233,12 @@ h4,
 h5,
 h6 {
   color: #215273;
-  margin: 0 0 10px 0;
-  letter-spacing: -0.02em;
-  line-height: 1.3em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
+
+
 
 h1 small,
 h2 small,
@@ -1259,6 +1261,10 @@ h6 .badge {
 .text-muted {
   font-size: 13px;
   color: #4F5050 !important;
+}
+hr{
+    border-top: 2px solid #215273;
+    margin-top: 0px;
 }
 
 h1 {
@@ -7699,4 +7705,10 @@ body.dark-mode-active .cart-item .cart-item-footer {
 }
 .bg-green{
     background:#CFF4D2;
+}
+iframe {
+    width: 100%;
+}
+img {
+    max-width: 100%;
 }

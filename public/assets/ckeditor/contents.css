@@ -18,6 +18,16 @@ body
 
 	margin: 20px;
 }
+table{
+    width: 500px;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+}
 
 .cke_editable
 {
@@ -67,14 +77,33 @@ ol,ul,dl
 
 h1,h2,h3,h4,h5,h6
 {
-	font-weight: normal;
-	line-height: 1.2;
+    font-weight: 600 !important;
+    line-height: 1.2;
+    color: #215273 !important;
+}
+h1, .h1 {
+    font-size: calc(1.3625rem + 1.35vw);
+}
+h2, .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+h3, .h3 {
+    font-size: calc(1.2875rem + 0.45vw);
+}
+h4, .h4 {
+    font-size: calc(1.2625rem + 0.15vw);
+}
+h5, .h5 {
+    font-size: 1.125rem;
+}
+h6, .h6 {
+    font-size: 0.9375rem;
 }
 
 hr
 {
 	border: 0px;
-	border-top: 1px solid #ccc;
+    border-top: 1px solid #215273;
 }
 
 img.right
@@ -205,4 +234,7 @@ a > img {
 	max-width: 1920px;
 	max-height: 1080px;
 	margin:0 auto;
+}
+img{
+    max-width: 50%;
 }

@@ -9,30 +9,32 @@ CKEDITOR.editorConfig = function (config) {
     // https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html
 
     // The toolbar groups arrangement, optimized for two toolbar rows.
+
     config.toolbarGroups = [
-
-
-
-
         { name: 'others' },
         '/',
         { name: 'basicstyles', groups: ['basicstyles', 'cleanup'] },
         { name: 'insert' },
         { name: 'forms' },
         { name: 'tools' },
-        { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'] },
+        { name: 'paragraph', groups: ['list', 'indent','align'] },
         { name: 'styles' },
         { name: 'colors' },
         { name: 'about' }
     ];
+
 
     // Remove some buttons provided by the standard plugins, which are
     // not needed in the Standard(s) toolbar.
     config.removeButtons = 'Underline,Subscript,Superscript';
 
     // Set the most common block elements.
-    config.format_tags = 'p;h1;h2;h3;pre';
+    config.format_tags = 'p;h1;h2;h3;h4;h5;pre';
+
 
     // Simplify the dialog windows.
     config.removeDialogTabs = 'image:advanced;link:advanced';
+
+    config.extraPlugins = 'youtube, autogrow';
+
 };

@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Aspiration;
 
 return new class extends Migration
 {
@@ -14,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('answer_aspirations', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('thumbnail');
+            $table->text('content')->nullable();
             $table->timestamps();
-            $table->string('answer');
-            $table->foreignIdFor(Aspiration::class);
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answer_aspirations');
+        Schema::dropIfExists('news');
     }
 };

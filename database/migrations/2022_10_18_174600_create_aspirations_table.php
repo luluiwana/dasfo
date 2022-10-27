@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->text('aspiration');
             $table->string('name');
+            $table->text('answer')->nullable();
         });
     }
 

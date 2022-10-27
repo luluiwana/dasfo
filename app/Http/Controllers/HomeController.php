@@ -3,15 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\VillageData;
+use App\Models\News;
+use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        //parse date to indonesian format
+        $news = News::orderBy('id', 'desc')->limit(3)->get();
+        $index = 0;
+        foreach ($news as $item) {
+            $date = Carbon::parse($news[$index]->created_at)->locale('id');
+            $date->settings(['formatFunction' => 'translatedFormat']);
+            $news[$index]->tanggal = $date->format('l, j F Y');
+            $index++;
+        }
         $data = [
-            'menu' => 'Beranda'
+            'menu' => 'Beranda',
+            'news' => $news
         ];
         return view('home.index', $data);
+    }
+    public function info($title)
+    {
+        $data = [
+            'menu' => 'Beranda',
+            'title' => $title,
+            'village_data' => VillageData::where('title', $title)->first(),
+            'check' => VillageData::where('title', $title)->count(),
+        ];
+        return view('home.info', $data);
     }
     public function culture()
     {
