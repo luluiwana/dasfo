@@ -80,31 +80,14 @@
     </div>
 @endsection
 @section('custom-js')
-    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'), {
-                placeholder: 'Tulis aspirasi Anda...',
-                plugins: [SimpleUploadAdapter],
-                // toolbar: ['undo', 'redo', '|', 'bold', 'italic', 'link', 'numberedList', 'uploadImage']
-            })
-            .then(editor => {
-                console.log(editor);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
     <script>
         $(function() {
             $("#customSwitch5").click(function() {
                 $("#input-name").toggle();
             });
         });
-    </script> --}}
+    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
     <script>
         CKEDITOR.replace('editor', {
@@ -115,15 +98,4 @@
 @endsection
 @section('custom-css')
     <link rel="stylesheet" href=" {{ asset('assets/css/ck_styles.css') }} ">
-    <style>
-        .ck.ck - editor__main>.ck - editor__editable: not(.ck - focused) {
-            min - height: 300 px;
-        }
-
-        .ck - rounded - corners.ck.ck - editor__main>.ck - editor__editable,
-        .ck.ck - editor__main>.ck - editor__editable.ck - rounded - corners {
-
-            min - height: 300 px;
-        }
-    </style>
 @endsection
