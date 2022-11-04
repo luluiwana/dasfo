@@ -15,10 +15,10 @@
                             <input type="file" name="file" class="form-control" id="file" required
                                 accept="image/*">
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label class="form-label" for="file">Data Anggaran Desa</label>
                             <input type="file" name="cashflow" class="form-control" id="file" required>
-                        </div>
+                        </div> --}}
 
                         <button type="submit" class="btn btn-success">Lanjut</button>
                     </form>

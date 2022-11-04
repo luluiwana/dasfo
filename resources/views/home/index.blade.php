@@ -21,7 +21,7 @@
                 <div class="item w-50 p-2">
                     <a href=" {{ route('info', 'Profil') }} ">
                         <div class="card">
-                            <img src="{{ asset('assets/img/custom/icon-pemerintahan.png') }}" class="card-img-top home-icon"
+                            <img src="{{ asset('assets/img/custom/icon-profil.png') }}" class="card-img-top home-icon"
                                 alt="image">
                             <div class="card-body pt-2 text-center">
                                 <h4 class="mb-0">Profil Desa</h4>
@@ -30,12 +30,23 @@
                     </a>
                 </div>
                 <div class="item w-50 p-2">
-                    <a href=" {{ route('info', 'Pemerintahan') }} ">
+                    <a href=" {{ route('gov', 'Pemerintahan') }} ">
                         <div class="card">
                             <img src="{{ asset('assets/img/custom/icon-pemerintahan.png') }}" class="card-img-top home-icon"
                                 alt="image">
                             <div class="card-body pt-2 text-center">
                                 <h4 class="mb-0">Pemerintahan</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item w-50 p-2">
+                    <a href=" {{ route('agenda') }} ">
+                        <div class="card">
+                            <img src="{{ asset('assets/img/custom/icon-agenda.png') }}" class="card-img-top home-icon"
+                                alt="image">
+                            <div class="card-body pt-2 text-center">
+                                <h4 class="mb-0">Agenda</h4>
                             </div>
                         </div>
                     </a>

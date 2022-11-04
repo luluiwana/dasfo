@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ForumController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\DataController;
 use App\Http\Controllers\admin\AdminNewsController;
 use App\Http\Controllers\admin\AnswerAspirationController;
+use App\Http\Controllers\admin\AdminAgendaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,8 @@ Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
 Route::get('/apparatus', [HomeController::class, 'apparatus'])->name('apparatus');
 //data
 Route::get('/info/{title}', [HomeController::class, 'info'])->name('info');
+Route::get('/gov/{title}', [HomeController::class, 'gov'])->name('gov');
+Route::get('/agenda', [HomeController::class, 'agenda'])->name('agenda');
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/article/{id}', [NewsController::class, 'article'])->name('article');
 Route::get('/forum', [ForumController::class, 'index'])->name('forum');
@@ -44,6 +48,7 @@ Route::post('/upload_image', [UploadFile::class, 'uploadImage'])->name('uploadIm
 
 // admin route
 Route::get('/auth', [AuthController::class, 'index'])->name('auth');
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 
 
@@ -64,6 +69,14 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/update_header/{title}', [DataController::class, 'updateHeader'])->name('update_header');
     //people
     Route::post('/add_people', [DataController::class, 'add_people'])->name('add_people');
+    Route::post('/edit_people/{id}', [DataController::class, 'edit_people'])->name('edit_people');
+    Route::get('/delete_people/{id}', [DataController::class, 'delete_people'])->name('delete_people');
+    //agenda
+    Route::get('/all_agenda', [AdminAgendaController::class, 'index'])->name('all_agenda');
+    Route::post('/store_agenda', [AdminAgendaController::class, 'store'])->name('store_agenda');
+    Route::get('/delete_agenda/{id}', [AdminAgendaController::class, 'delete'])->name('delete_agenda');
+    Route::post('/update_agenda/{id}', [AdminAgendaController::class, 'update'])->name('update_agenda');
+
 
     //news
     Route::get('/all_news', [AdminNewsController::class, 'index'])->name('all_news');

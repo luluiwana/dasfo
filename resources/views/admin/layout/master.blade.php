@@ -81,6 +81,11 @@
                                 <div data-i18n="Without navbar">Pemerintahan</div>
                             </a>
                         </li>
+                        <li class="menu-item @if ($subtitle == 'Agenda') active @endif">
+                            <a href="{{ route('all_agenda') }}" class="menu-link">
+                                <div data-i18n="Without navbar">Agenda</div>
+                            </a>
+                        </li>
                         <li class="menu-item  @if ($subtitle == 'Sosial') active @endif">
                             <a href="{{ route('data', 'Sosial') }}" class="menu-link">
                                 <div data-i18n="Container">Sosial</div>
@@ -105,7 +110,7 @@
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="index.html" class="menu-link">
+                    <a href=" {{ route('logout') }} " class="menu-link">
                         <i class="menu-icon tf-icons bx bxs-log-out-circle"></i>
                         <div data-i18n="Analytics">Keluar</div>
                     </a>

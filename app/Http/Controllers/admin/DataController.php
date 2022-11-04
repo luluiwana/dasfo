@@ -29,7 +29,8 @@ class DataController extends Controller
             'subtitle' => $title,
             'check_data' => VillageData::where('title', $title)->count(),
             'village_data' => VillageData::where('title', $title)->first(),
-            'cashflow' => VillageData::where('title', 'Anggaran')->first()
+            'cashflow' => VillageData::where('title', 'Anggaran')->first(),
+            'people' => People::orderBy('id', 'asc')->get()
         ];
         return \view('admin.data.gov_index', $data);
     }
@@ -78,7 +79,7 @@ class DataController extends Controller
             if (isset($request->file[$item])) {
                 $images = $request->file('file');
                 $fileName = time() . '_' .  $images[$item]->getClientOriginalName();
-                $filePath = $images[$item]->storeAs('data_desa', $fileName, 'public');
+                $filePath = $images[$item]->storeAs('perangkat', $fileName, 'public');
                 $fileModel = new People();
                 $fileModel->title = $request->title[$item];
                 $fileModel->name = $request->name[$item];
@@ -88,11 +89,53 @@ class DataController extends Controller
         }
         return redirect('govdata/Pemerintahan');
     }
+    public function edit_people(Request $request, $id)
+    {
+        $request->validate([
+            'file.*' => 'mimes:png,jpg,png,jpeg|max:2048'
+        ]);
+
+        if (isset($request->file)) {
+            $images = $request->file('file');
+            $fileName = time() . '_' .  $images->getClientOriginalName();
+            $filePath = $images->storeAs('perangkat', $fileName, 'public');
+            //get old photo
+            $old = People::where('id', $id)->first()->photo;
+            //delete old photo
+            Storage::delete('/public/' . $old);
+            //update
+            $data = [
+                'title' => $request->title,
+                'name' => $request->name,
+                'photo' => $filePath
+            ];
+            People::where('id', $id)->update($data);
+        } else {
+            //update
+            $data = [
+                'title' => $request->title,
+                'name' => $request->name,
+            ];
+            People::where('id', $id)->update($data);
+        }
+
+
+        return redirect('govdata/Pemerintahan');
+    }
+    public function delete_people($id)
+    {
+        //get old photo
+        $old = People::where('id', $id)->first()->photo;
+        //delete old photo
+        Storage::delete('/public/' . $old);
+        //delete from db
+        People::where('id', $id)->delete();
+        return redirect('govdata/Pemerintahan');
+    }
     public function store_gov(Request $request, $title)
     {
         $request->validate([
             'file' => 'required|mimes:png,jpg,png,jpeg|max:2048',
-            'cashflow' => 'required'
         ]);
         $fileModel = new VillageData;
         if ($request->file()) {
@@ -104,10 +147,10 @@ class DataController extends Controller
         }
         $fileModel = new VillageData;
         if ($request->file()) {
-            $fileName = time() . '_' . $request->cashflow->getClientOriginalName();
-            $filePath = $request->file('cashflow')->storeAs('data_desa', $fileName, 'public');
+            // $fileName = time() . '_' . $request->cashflow->getClientOriginalName();
+            // $filePath = $request->file('cashflow')->storeAs('data_desa', $fileName, 'public');
             $fileModel->title = 'Anggaran';
-            $fileModel->thumbnail = $filePath;
+            $fileModel->thumbnail = '';
             $fileModel->save();
         }
         return redirect('/govdata/' . $title);
@@ -142,10 +185,5 @@ class DataController extends Controller
                 ->with('file', $fileName);
         }
         return redirect('/data/' . $title);
-    }
-
-    public function edit_people($id)
-    {
-        # code...
     }
 }

@@ -55,18 +55,105 @@
                                 </form>
                             </div>
                             <div class="w-30 m-auto text-center">
-                                <a class="btn btn-success"
-                                    href="{{ asset('storage/' . $cashflow->thumbnail) }}">Download</a>
+                                @if ($cashflow->thumbnail)
+                                    <a class="btn btn-success"
+                                        href="{{ asset('storage/' . $cashflow->thumbnail) }}">Download</a>
+                                @endif
+
 
                             </div>
                         </div>
                     </div>
-                    @if (!empty($perangkat))
-                    @endif
-                    <div class="card card-body">
+
+                    <div class="card card-body mb-3">
                         <h5> Data Perangkat Desa</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nama</th>
+                                <th>Jabatan</th>
+                                <th>Opsi</th>
+                            </tr>
+                            @foreach ($people as $item)
+                                <tr>
+                                    <td>
+                                        <img src=" {{ asset('/storage/' . $item->photo) }} " alt="" width="70px">
+                                    </td>
+                                    <td>
+                                        {{ $item->name }}
+                                    </td>
+                                    <td>
+                                        {{ $item->title }}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="First group">
+                                            <a data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="top"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="<i class='bx bx-info-circle'></i> <span>Edit</span>">
+                                                <button type="button" class="btn btn-outline-success text-dark"
+                                                    data-bs-toggle="modal" data-bs-target="#Modal{{ $item->id }}">
+                                                    <i class='bx bxs-pencil'></i>
+                                                </button>
+                                            </a>
+
+                                            <a href=" {{ route('delete_people', $item->id) }} " type="button"
+                                                class="btn btn-outline-success text-dark" data-bs-toggle="tooltip"
+                                                data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
+                                                title=""
+                                                data-bs-original-title="<i class='bx bx-info-circle'></i> <span>Hapus</span>">
+                                                <i class='bx bxs-trash-alt'></i>
+                                            </a>
+                                            <!-- Small Modal -->
+                                            <div class="modal fade" id="Modal{{ $item->id }}" tabindex="-1"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-sm" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel2">Ubah Data
+                                                            </h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action=" {{ route('edit_people', $item->id) }} "
+                                                                method="post" enctype="multipart/form-data">
+                                                                @csrf
+                                                                <label class="form-label" for="content">Nama
+                                                                    Lengkap</label>
+                                                                <input type="text" name="name" id=""
+                                                                    class="form-control mb-2" value="{{ $item->name }}"
+                                                                    required>
+                                                                <label class="form-label" for="content">Jabatan</label>
+
+                                                                <input type="text" class="form-control mb-2"
+                                                                    name="title" id="" required
+                                                                    value="{{ $item->title }}">
+                                                                <label class="form-label" for="content">Foto</label>
+
+                                                                <input type="file" name="file"
+                                                                    class="form-control mb-2" name="file"
+                                                                    id="file">
+                                                                <input type="submit" class="btn  btn-success mt-2"
+                                                                    value="Simpan">
+
+                                                            </form>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+
+                        </table>
+
 
                     </div>
+
                     <div class="card card-body">
                         <h5>Tambah Data Perangkat Desa</h5>
                         @if ($errors->has('file'))
@@ -82,8 +169,8 @@
                                 <input type="text" class="form-control mb-2" name="title[]" id="" required>
                                 <label class="form-label" for="content">Foto</label>
 
-                                <input type="file" name="file[]" class="form-control mb-2" name="file" id="file"
-                                    required>
+                                <input type="file" name="file[]" class="form-control mb-2" name="file"
+                                    id="file" required>
                                 <hr>
                             </div>
                             <button id='add_person' type="button"
@@ -95,7 +182,7 @@
                 </div>
                 <div class=" col-md-4 ">
                     <div class="card">
-                        <embed type="text/html" src=" {{ route('info', $subtitle) }} " width="300" height="1000"
+                        <embed type="text/html" src=" {{ route('gov', $subtitle) }} " width="300" height="1000"
                             style="width: 100%; border-radius:10px">
 
                     </div>
@@ -189,8 +276,7 @@
     <style>
         td {
             border: 1px solid;
-            padding: 0.5rem;
-            text-align: center;
+            /* padding: 0.5rem; */
         }
     </style>
 @endsection

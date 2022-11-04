@@ -8,7 +8,7 @@
 
             </a>
         </div>
-        <div class="pageTitle">Sosial</div>
+        <div class="pageTitle"> {{ $village_data->title }} </div>
         <div class="right">
 
         </div>

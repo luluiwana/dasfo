@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\VillageData;
 use App\Models\News;
 use Illuminate\Support\Carbon;
+use App\Models\People;
+use App\Models\Agenda;
 
 class HomeController extends Controller
 {
@@ -35,6 +37,36 @@ class HomeController extends Controller
             'check' => VillageData::where('title', $title)->count(),
         ];
         return view('home.info', $data);
+    }
+    public function gov($title)
+    {
+        $data = [
+            'menu' => 'Beranda',
+            'title' => $title,
+            'village_data' => VillageData::where('title', $title)->first(),
+            'check' => VillageData::where('title', $title)->count(),
+            'people' => People::orderBy('id', 'asc')->get(),
+            'anggaran' => VillageData::where('title', 'Anggaran')->first()
+        ];
+        return view('home.gov', $data);
+    }
+    public function agenda()
+    {
+        //parse date to indonesian format
+        $agenda =  Agenda::orderBy('date', 'desc')->get();
+        $index = 0;
+        foreach ($agenda as $item) {
+            $date = Carbon::parse($agenda[$index]->date)->locale('id');
+            $date->settings(['formatFunction' => 'translatedFormat']);
+            $agenda[$index]->tanggal = $date->format('l, j F Y');
+            $index++;
+        }
+        $data = [
+            'menu' => 'Beranda',
+            'title' => 'Agenda',
+            'agenda' => $agenda
+        ];
+        return view('home.agenda', $data);
     }
     public function culture()
     {
